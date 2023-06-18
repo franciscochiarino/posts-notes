@@ -31,7 +31,7 @@ Hugo works with templates. You don't build websites from scratch. The overall fl
 
 ## Installation
 
-Install Hugo on macOS homebrew:
+Install Hugo on macOS using homebrew:
 ```
 brew install hugo
 ```
@@ -54,7 +54,7 @@ Or just manually opening your project folder.
 You'll notice a bunch of directories and a file in your project folder and you might be thinking "What's all this?". Let's go through them, but don't worry if you don't understand everything right away. You'll know them better as you use them.
 
 ### hugo.toml
-In this file you'll manage the overall configuration of your project. I like to change this file to _hugo.yml_ **and I will do so for this tutorial** because I'm more familiar with the yml syntax. Feel free to do so if you want to. You'll also write the them configuration here. Well get to that later.
+In this file you'll manage the overall configuration of your project. I like to change this file to _hugo.yaml_ **and I will do so for this tutorial** because I'm more familiar with the yaml syntax. Feel free to do so if you want to. You'll also write the them configuration here. Well get to that later.
 
 ### archetypes
 This handles the `hugo new` command, which we'll use to create new content files. Hugo will create a new content file with the `title`, `date` and `draft` properties automatically. You can control of these properties in this directory by changing _default.md_.
@@ -77,7 +77,7 @@ Caches some files to speed up generation.
 ## Add a Theme
 On [Hugo's theme website](https://themes.gohugo.io) you'll find a lot of cool themes for free. You can choose the one you like, but for this example we're gonna use [PaperMod](https://themes.gohugo.io/themes/hugo-papermod/). Under the PaperMod link you'll find a download button which takes you to [this GitHub page](https://github.com/adityatelange/hugo-PaperMod). Here you'll find instructions on [how to install it and how to configure it](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation).
 
-This is pretty much how themes work with Hugo. You select one you like and they have their own configuration. Now, "configuration" sounds like something complicated is about to happen, but these are just going to be key-value pairs in your _hugo.yml_ file like:
+This is pretty much how themes work with Hugo. You select the one you like and they have their own configuration. Now, "configuration" sounds like something complicated is about to happen, but these are just going to be key-value pairs in your _hugo.yaml_ file like:
 ```
 params:
   description: This is the description of the website.
@@ -88,9 +88,9 @@ So to install the PaperMod theme we have to run:
 ```
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
 ```
-If you have a closer look to that command you'll see it's just cloning the theme repo in your _themes_ directory. If you run this and it complains there's not repo, just run `git init`.
+If you have a closer look to that command you'll see it's just cloning the theme repo in your _themes_ directory. If you run this and it complains there's no repo, just run `git init`.
 
-Activate this theme by adding this to _hugo.yml_:
+Activate this theme by adding this to _hugo.yaml_:
 ```
 theme: PaperMod
 ```
@@ -107,11 +107,13 @@ Now that you have your site running, you can run this command to create a new po
 hugo new posts/my-post.md
 ```
 
-This will create the _post_ directory and the _my-post.md_ file inside the _content_ director. If you run your server again, you'll notice that you can't see any posts on your site. This is because in _my-post.md_ you have the `draft` attribute set to `true`. This little section in between three dashes is called the _"front matter"_. Set `draft` to `false`, run your server and you'll see your post!
+This will create the _post_ directory and the _my-post.md_ file inside the _content_ directory. If you run your server again, you'll notice that you can't see any posts on your site. This is because in _my-post.md_ you have the `draft` attribute set to `true`. This little section in between three dashes is called the _"front matter"_. Set `draft` to `false`, run your server and you'll see your post!
 ```
+---
 title: "My Post"
 date: 2023-06-18T13:37:21+02:00
 draft: false
+---
 ```
 
 ### Add an image
@@ -119,6 +121,7 @@ Drag and drop an image into your static folder. Let's pretend it's called `examp
 
 Then just add the image path along with some other attributes to your front matter inside _my-post.md_:
 ```
+---
 title: "My Post"
 date: 2023-06-18T13:37:21+02:00
 draft: false
@@ -126,6 +129,7 @@ cover:
   image: 'example.jpg'
   alt: 'example'
   caption: 'This is just an example'
+---
 ```
 
 Keep in mind these configurations vary from theme to theme, but as you can see it's pretty simple.
@@ -133,12 +137,14 @@ Keep in mind these configurations vary from theme to theme, but as you can see i
 ### Add tags
 We can also easily add tags to our post by modifying the front matter:
 ```
+---
 # ...
 tags: [front-end, hugo]
+---
 ```
 
 ## Create a Menu
-Inside your _hugo.yml_ file you can create a menu like so:
+Inside your _hugo.yaml_ file you can create a menu like so:
 ```
 menu:
   main:
