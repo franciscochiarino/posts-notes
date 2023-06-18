@@ -3,7 +3,7 @@ title: "Creating Websites With Hugo"
 date: 2023-06-18T13:37:21+02:00
 summary: A step by step guide on how to create static websites using Hugo.
 draft: false
-tags: [front-end, hugo]
+tags: [hugo]
 ---
 
 Creating a website with Hugo can be really easy and enjoyable. I hope you have fun reading these notes and developing your own site!
@@ -54,7 +54,7 @@ Or just manually opening your project folder.
 You'll notice a bunch of directories and a file in your project folder and you might be thinking "What's all this?". Let's go through them, but don't worry if you don't understand everything right away. You'll know them better as you use them.
 
 ### hugo.toml
-In this file you'll manage the overall configuration of your project. I like to change this file to _hugo.yaml_ **and I will do so for this tutorial** because I'm more familiar with the yaml syntax. Feel free to do so if you want to. You'll also write the them configuration here. Well get to that later.
+In this file you'll manage the overall configuration of your project. I like to change this file to _hugo.yaml_ **and I will do so for this tutorial** because I'm more familiar with the yaml syntax. Feel free to do so if you want to. You'll also write the configuration here. Well get to that later.
 
 ### archetypes
 This handles the `hugo new` command, which we'll use to create new content files. Hugo will create a new content file with the `title`, `date` and `draft` properties automatically. You can control of these properties in this directory by changing _default.md_.
