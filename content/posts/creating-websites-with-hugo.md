@@ -168,3 +168,10 @@ Create a _.gitmodules_ file and add your theme as a submodule:
 ```
 
 Then push your repo to GitHub.
+
+Login to Netlify, select Add new site > Import an existing project, select GitHub and select your repo. Change the build command to `hugo`, fill `public` in Publish Directory and under Advanced Settings add the `HUGO_VERSION` variable and set it to your version (check using `hugo version` on your terminal).
+
+Finally, get your site's url from netlify and add it to the hugo.yaml file, so that it can work as expected:
+```
+baseURL: 'https://whatever-url.netlify.app'
+```
