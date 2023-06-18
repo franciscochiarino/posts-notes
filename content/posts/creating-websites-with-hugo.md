@@ -160,11 +160,9 @@ If you want to change a stylesheet instead of a markup file, the approach is the
 ## Deploy
 For this deploy we're gonna use Netlify (which is awesome).
 
-Create a _.gitmodules_ file and add your theme as a submodule:
+Add your theme as a sub-module:
 ```
-[submodule "themes/PaperMod"]
-  path = themes/PaperMod
-  url = "https://github.com/adityatelange/hugo-PaperMod"
+git submodule add --force <url> <path>
 ```
 
 Then push your repo to GitHub.
