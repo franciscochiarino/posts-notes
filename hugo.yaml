@@ -1,0 +1,27 @@
+baseURL: ''
+languageCode: en-us
+title: Posts Notes
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+
+params:
+  description: Posts Notes is a place where I share my notes on various topics.
+  keywords: [Blog, Notes, Resources, Tech, Web Development]
+
+  homeInfoParams:
+    Title: Hey there 👋
+    Content: I'm Fran. I use this site to share my notes on various topics. I hope you find them useful!
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/franciscochiarino"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/francisco-chiarino/"
+    - name: link
+      url: "https://franciscochiarino.com/"
