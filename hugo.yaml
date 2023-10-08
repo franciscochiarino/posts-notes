@@ -14,6 +14,9 @@ params:
   description: Posts Notes is a place where I share my notes on various topics.
   keywords: [Blog, Notes, Resources, Tech, Web Development]
 
+  assets:
+    favicon: '/assets/favicon.png'
+
   homeInfoParams:
     Title: Hey there 👋
     Content: I'm Fran. I use this site to share my notes on various topics. I hope you find them useful!
