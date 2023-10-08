@@ -1,7 +1,7 @@
 ---
 title: "React Native Basics"
-date: 2023-06-18T19:53:29+02:00
-summary: Primitive elements, Stack Navigator, Reducer and useReducer
+date: 2023-08-08T19:53:29+02:00
+summary: Primitive elements, Stack Navigator basics, Reducer and useReducer.
 draft: false
 tags: [react native]
 ---
