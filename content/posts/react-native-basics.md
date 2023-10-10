@@ -37,7 +37,10 @@ The `TextInput` component comes with a couple of common issues we need to be awa
 * I has no style whatsoever, so every time we use it, we're gonna have to provide some kind of style.
 * iOS and some versions of Android either capitalize or autocorrect words as they are being typed. To prevent this we can use a couple of properties: `autoCapitalize="none"` and `autoCorrect={false}`.
 
-Another thing to keep in mind is that instead of the `password` tag we have to use `secureTextEntry={true}`.
+A few things are different from out beloved React Input tag:
+* Instead of the `password` tag we have to use `secureTextEntry={true}`.
+* Instead of `onChange` we use `onChangeText`.
+* Instead of `onSubmit` we use `onEndEditing`. This event is triggered when the user click the "Enter" button on the phone keyboard.
 
 ## Stack Navigator
 
