@@ -1,5 +1,5 @@
 ---
-title: "React Native: Navigation with parameters [outdated]"
+title: "React Native - Navigation with parameters [outdated]"
 date: 2023-08-12T15:00:00+02:00
 summary: Primitive elements, Stack Navigator basics, Reducer and useReducer.
 draft: false
